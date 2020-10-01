@@ -28,7 +28,7 @@ map_output = "/Users/charlie/mymap.html"
 
 url = "https://api.findmespot.com/spot-main-web/consumer/rest-api/2.0/public/feed/%s/message" % spot_id
 
-
+#defining merge_tracks
 def merge_tracks(a, b):
     """ merges tracks (b) into (a), skipping those with the same timestamp.
     Sorts by unixTime key.
@@ -44,7 +44,7 @@ def merge_tracks(a, b):
                       ],
                   key=itemgetter('unixTime'), reverse=True
                  )
-
+#defining do_map
 def do_map(json_output, options):
     """ Creates a google map HTML page with points plotted for every point in known,
     and draws a line between each.
